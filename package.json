@@ -1,0 +1,77 @@
+{
+  "name": "drwade",
+  "description": "A CLI to help you building your applications ",
+  "version": "0.0.0",
+  "author": "Edward Tombre @Dr-Wade",
+  "bin": {
+    "drwade": "./bin/run"
+  },
+  "bugs": "https://github.com/Dr-Wade/drwade-cli/issues",
+  "dependencies": {
+    "@oclif/command": "^1.8.0",
+    "@oclif/config": "^1.17.0",
+    "@oclif/plugin-autocomplete": "^0.2.0",
+    "@oclif/plugin-help": "^3.2.0",
+    "@types/chalk": "^2.2.0",
+    "@types/signale": "^1.4.1",
+    "await-spawn": "^4.0.1",
+    "chalk": "^4.1.0",
+    "cli-ux": "^5.5.0",
+    "handlebars": "^4.7.6",
+    "inquirer": "^7.3.3",
+    "ncp": "^2.0.0",
+    "signale": "^1.4.0",
+    "tslib": "^1.13.0"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.22.2",
+    "@oclif/test": "^1.2.7",
+    "@types/chai": "^4.2.13",
+    "@types/inquirer": "^7.3.1",
+    "@types/mocha": "^5.2.7",
+    "@types/ncp": "^2.0.4",
+    "@types/node": "^10.17.35",
+    "chai": "^4.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-oclif": "^3.1.0",
+    "eslint-config-oclif-typescript": "^0.1.0",
+    "globby": "^10.0.2",
+    "mocha": "^5.2.0",
+    "nyc": "^14.1.1",
+    "rimraf": "^3.0.2",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "homepage": "https://github.com/Dr-Wade/drwade-cli",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "oclif": {
+    "commands": "./lib/commands",
+    "bin": "drwade",
+    "plugins": [
+      "@oclif/plugin-help",
+      "@oclif/plugin-autocomplete"
+    ]
+  },
+  "repository": "Dr-Wade/drwade-cli",
+  "scripts": {
+    "postpack": "rimraf oclif.manifest.json",
+    "posttest": "eslint . --ext .ts --config .eslintrc",
+    "prepack": "rimraf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
+    "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
+    "version": "oclif-dev readme && git add README.md"
+  },
+  "types": "lib/index.d.ts"
+}

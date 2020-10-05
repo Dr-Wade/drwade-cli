@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:400,500,700");
+html {
+    font-family: Ubuntu, sans-serif;
+}
+
+.btn-text {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.btn {
+    @apply cursor-pointer;
+    @apply px-5;
+    @apply py-2;
+    @apply inline-block;
+}
+
+.btn-teal {
+    background: linear-gradient(46.17deg, #B2D2CF -19.11%, #729393 132.98%);
+    border: 1px solid rgba(19, 40, 54, 0.1);
+    @apply text-white;
+    @apply btn-text;
+}
+
+.btn-teal:hover:not(.disabled) {
+    @apply bg-teal-400;
+    @apply text-white;
+}
+
+.btn-red {
+    @apply bg-red-600;
+    @apply text-red-100;
+    border: 1px solid #e53e3e;
+    @apply btn-text;
+}
+
+.btn-red:hover:not(.disabled) {
+    @apply bg-red-500;
+    @apply text-white;
+}
+
+.btn-gray {
+    background: #838CA8;
+    border: 1px solid rgba(19, 40, 54, 0.1);
+    @apply text-white;
+    @apply btn-text;
+}
+
+.btn-gray:hover:not(.disabled) {
+    @apply bg-gray-400;
+    @apply text-white;
+}
+
+.btn.disabled {
+    @apply opacity-50;
+    @apply cursor-default;
+}
