@@ -19,7 +19,7 @@ $ npm install -g @drwade/drwade-cli
 $ drwade COMMAND
 running command...
 $ drwade (-v|--version|version)
-@drwade/drwade-cli/0.1.0 win32-x64 node-v12.13.1
+@drwade/drwade-cli/0.1.1 win32-x64 node-v12.13.1
 $ drwade --help [COMMAND]
 USAGE
   $ drwade COMMAND
@@ -67,7 +67,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src\commands\generate\project.ts](https://github.com/Dr-Wade/drwade-cli/blob/v0.1.0/src\commands\generate\project.ts)_
+_See code: [src\commands\generate\project.ts](https://github.com/Dr-Wade/drwade-cli/blob/v0.1.1/src\commands\generate\project.ts)_
 
 ## `drwade help [COMMAND]`
 

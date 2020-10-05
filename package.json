@@ -1,7 +1,7 @@
 {
   "name": "@drwade/drwade-cli",
   "description": "A CLI to help you building your applications ",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Edward Tombre @Dr-Wade",
   "private": false,
   "bin": {
