@@ -1,12 +1,14 @@
 {
-  "name": "drwade",
+  "name": "@drwade/drwade-cli",
   "description": "A CLI to help you building your applications ",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "Edward Tombre @Dr-Wade",
   "bin": {
     "drwade": "./bin/run"
   },
-  "bugs": "https://github.com/Dr-Wade/drwade-cli/issues",
+  "bugs": {
+    "url": "https://github.com/Dr-Wade/drwade-cli/issues"
+  },
   "dependencies": {
     "@oclif/command": "^1.8.0",
     "@oclif/config": "^1.17.0",
@@ -55,7 +57,7 @@
   "keywords": [
     "oclif"
   ],
-  "license": "MIT",
+  "license": "GPL-2.0-only",
   "main": "lib/index.js",
   "oclif": {
     "commands": "./lib/commands",
@@ -65,7 +67,10 @@
       "@oclif/plugin-autocomplete"
     ]
   },
-  "repository": "Dr-Wade/drwade-cli",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dr-Wade/drwade-cli.git"
+  },
   "scripts": {
     "postpack": "rimraf oclif.manifest.json",
     "posttest": "eslint . --ext .ts --config .eslintrc",
@@ -73,5 +78,8 @@
     "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
     "version": "oclif-dev readme && git add README.md"
   },
-  "types": "lib/index.d.ts"
+  "types": "lib/index.d.ts",
+  "directories": {
+    "test": "test"
+  }
 }
