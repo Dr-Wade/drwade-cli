@@ -15,11 +15,11 @@ A CLI to help you building your applications
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g drwade
+$ npm install -g @drwade/drwade-cli
 $ drwade COMMAND
 running command...
 $ drwade (-v|--version|version)
-drwade/0.0.0 win32-x64 node-v12.13.1
+@drwade/drwade-cli/0.1.0 win32-x64 node-v12.13.1
 $ drwade --help [COMMAND]
 USAGE
   $ drwade COMMAND
@@ -29,8 +29,7 @@ USAGE
 # Commands
 <!-- commands -->
 * [`drwade autocomplete [SHELL]`](#drwade-autocomplete-shell)
-* [`drwade generate:project [FILE]`](#drwade-generateproject-file)
-* [`drwade hello [FILE]`](#drwade-hello-file)
+* [`drwade generate:project`](#drwade-generateproject)
 * [`drwade help [COMMAND]`](#drwade-help-command)
 
 ## `drwade autocomplete [SHELL]`
@@ -56,41 +55,19 @@ EXAMPLES
 
 _See code: [@oclif/plugin-autocomplete](https://github.com/oclif/plugin-autocomplete/blob/v0.2.0/src\commands\autocomplete\index.ts)_
 
-## `drwade generate:project [FILE]`
+## `drwade generate:project`
 
-describe the command here
-
-```
-USAGE
-  $ drwade generate:project [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
-```
-
-_See code: [src\commands\generate\project.ts](https://github.com/Dr-Wade/drwade-cli/blob/v0.0.0/src\commands\generate\project.ts)_
-
-## `drwade hello [FILE]`
-
-describe the command here
+Generate a new project
 
 ```
 USAGE
-  $ drwade hello [FILE]
+  $ drwade generate:project
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
-
-EXAMPLE
-  $ drwade hello
-  hello world from ./src/hello.ts!
+  -h, --help  show CLI help
 ```
 
-_See code: [src\commands\hello.ts](https://github.com/Dr-Wade/drwade-cli/blob/v0.0.0/src\commands\hello.ts)_
+_See code: [src\commands\generate\project.ts](https://github.com/Dr-Wade/drwade-cli/blob/v0.1.0/src\commands\generate\project.ts)_
 
 ## `drwade help [COMMAND]`
 

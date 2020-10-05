@@ -3,6 +3,7 @@
   "description": "A CLI to help you building your applications ",
   "version": "0.1.0",
   "author": "Edward Tombre @Dr-Wade",
+  "private": false,
   "bin": {
     "drwade": "./bin/run"
   },
@@ -41,6 +42,7 @@
     "mocha": "^5.2.0",
     "nyc": "^14.1.1",
     "rimraf": "^3.0.2",
+    "shx": "^0.3.2",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.7"
   },
@@ -74,7 +76,7 @@
   "scripts": {
     "postpack": "rimraf oclif.manifest.json",
     "posttest": "eslint . --ext .ts --config .eslintrc",
-    "prepack": "rimraf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
+    "prepack": "rimraf lib && tsc -b && shx cp -r src/templates lib && oclif-dev manifest && oclif-dev readme",
     "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
     "version": "oclif-dev readme && git add README.md"
   },
